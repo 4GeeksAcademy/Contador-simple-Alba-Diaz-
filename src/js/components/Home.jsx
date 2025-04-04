@@ -1,28 +1,29 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-            
+export const Home = ({ digitSix, digitFive, digitFour, digitThree, digitTwo, digitOne }) => {
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
+    return (
+        <div className="container mt-5 ">
+            <h1 className="d-flex justify-content-center">
+                Simple Counter
+            </h1>
 
-export default Home;
+            <div className="container  mt-5">
+                <div className="bg-dark  d-flex justify-content-center p-3 border rounded-pill">
+                    <div className="clock d-flex align-items-center">
+                        <i className="far fa-clock text-white fs-1 px-4 mx-2 "></i>
+                    </div>
+                    <div className="digitSix text-white fs-1 border border-white rounded px-4 mx-2">{digitSix % 10}</div>
+                    <div className="digitFive text-white fs-1 border border-white rounded px-4 mx-2">{digitFive % 10}</div>
+                    <div className="digitFour text-white fs-1 border border-white rounded px-4 mx-2">{digitFour % 10}</div>
+                    <div className="digitTree text-white fs-1 border border-white rounded px-4 mx-2 ">{digitThree % 10}</div>
+                    <div className="digitTwo text-white fs-1 border border-white rounded px-4 mx-2">{digitTwo % 10}</div>
+                    <div className="digitOne text-white fs-1 border border-white rounded px-4 mx-2">{digitOne % 10}</div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
